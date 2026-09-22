@@ -34,7 +34,7 @@ Un proyecto interactivo creado con **Next.js (App Router), React, TypeScript y T
 
 1. Navegar a la carpeta del proyecto:
    ```bash
-   cd /Users/muramena/.gemini/antigravity/scratch/pokeapi-hooks-demo
+   cd /pokeapi-hooks-demo
    ```
 
 2. Instalar las dependencias (si aún no se han instalado):
