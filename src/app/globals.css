@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pokemon-stat-progress {
+  width: 100%;
+  height: 0.5rem;
+  appearance: none;
+  overflow: hidden;
+  border: 0;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+}
+
+.pokemon-stat-progress::-webkit-progress-bar {
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+}
+
+.pokemon-stat-progress::-webkit-progress-value {
+  border-radius: 9999px;
+  background-color: #4f46e5;
+  transition: width 0.5s ease;
+}
+
+.pokemon-stat-progress::-moz-progress-bar {
+  border-radius: 9999px;
+  background-color: #4f46e5;
+  transition: width 0.5s ease;
+}

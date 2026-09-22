@@ -1,0 +1,26 @@
+.container { display: flex; flex-direction: column; gap: 1.5rem; }
+.paginationBar { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; border: 1px solid #f1f5f9; border-radius: 1rem; background: white; box-shadow: 0 1px 2px rgb(15 23 42 / .05); }
+.paginationText { color: #475569; font-size: .875rem; font-weight: 600; }
+.currentPage { color: #4f46e5; font-weight: 700; }
+.paginationControls { display: flex; gap: .5rem; }
+.paginationButton { display: flex; align-items: center; gap: .25rem; padding: .5rem .75rem; border: 0; border-radius: .75rem; font-size: .75rem; font-weight: 600; cursor: pointer; transition: all 150ms ease; }
+.paginationButton:disabled { opacity: .5; pointer-events: none; }
+.previousButton { background: #f1f5f9; color: #334155; }
+.previousButton:hover { background: #eef2ff; color: #4f46e5; }
+.nextButton { background: #0f172a; color: white; box-shadow: 0 1px 2px rgb(15 23 42 / .05); }
+.nextButton:hover { background: #4f46e5; }
+.buttonIcon { width: 1rem; height: 1rem; }
+.loadingState { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: 5rem 1rem; border: 1px solid #f1f5f9; border-radius: 1.5rem; background: white; color: #4f46e5; box-shadow: 0 1px 2px rgb(15 23 42 / .05); }
+.loadingIcon { width: 2.5rem; height: 2.5rem; animation: spin 1s linear infinite; }
+.statusText { color: #475569; font-size: .875rem; font-weight: 600; }
+.errorState { padding: 4rem 1.5rem; border: 1px solid #ffe4e6; border-radius: 1.5rem; background: #fff1f2; text-align: center; }
+.errorIcon { width: 2.5rem; height: 2.5rem; margin: 0 auto .75rem; color: #f43f5e; }
+.errorText { margin: 0 0 .75rem; color: #9f1239; font-size: .875rem; font-weight: 600; }
+.retryButton { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem 1rem; border: 0; border-radius: .75rem; background: #e11d48; color: white; font-size: .75rem; font-weight: 700; cursor: pointer; }
+.retryButton:hover { background: #be123c; }
+.emptyState { padding: 4rem 1.5rem; border: 1px solid #f1f5f9; border-radius: 1.5rem; background: white; color: #64748b; text-align: center; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (min-width: 640px) { .paginationBar { flex-direction: row; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }

@@ -1,0 +1,85 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #f1f5f9;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.05);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
+}
+
+.id {
+  align-self: flex-start;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: 0.5rem 0;
+  transition: transform 300ms ease;
+}
+
+.card:hover .imageWrapper {
+  transform: scale(1.05);
+}
+
+.image {
+  object-fit: contain;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+}
+
+.name {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: color 150ms ease;
+}
+
+.card:hover .name {
+  color: #4f46e5;
+}
+
+.detailsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #0f172a;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.05);
+}
+
+.detailsButton:hover {
+  background: #4f46e5;
+}
+
+.buttonIcon {
+  width: 1rem;
+  height: 1rem;
+}
